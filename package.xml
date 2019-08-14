@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<package>
+    <name>DigitalPianism_ReviewCaptcha</name>
+    <version>0.0.4</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This module lets you use the Magento captcha on the product review form.</summary>
+    <description>&lt;h2&gt;Description&lt;/h2&gt;&#xD;
+&lt;p&gt;Beeing spammed by the product review form on your Magento website ? Digital Pianism Review Captcha module is the solution.&lt;/p&gt;&#xD;
+&lt;p&gt;With this extension, you will be able to use the original Magento captcha on the product review form.&lt;/p&gt;&#xD;
+&#xD;
+&lt;h2&gt;Installation&lt;/h2&gt;&#xD;
+&#xD;
+&lt;h3&gt;Configuration&lt;/h3&gt;&#xD;
+&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Install the module manually or via Magento Connect.&lt;/li&gt;&#xD;
+&lt;li&gt;Flush the cache&lt;/li&gt;&#xD;
+&lt;li&gt;Access System &gt; Configuration &gt; Customer Configuration &gt; Captcha&lt;/li&gt;&#xD;
+&lt;li&gt;If you're not using the Magento captcha on your website yet, set Enable CAPTCHA on Frontend to Yes&lt;/li&gt;&#xD;
+&lt;li&gt;Then choose Review Form in the Forms multiselect.&lt;/li&gt;&#xD;
+&lt;li&gt;Save the configuration&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&#xD;
+&lt;h3&gt;Template integration&lt;/h3&gt;&#xD;
+&#xD;
+&lt;p&gt;The only code manipulation that you need to do is modify the following template: app/design/frontend/&lt;your_package&gt;/&lt;your_theme&gt;/template/review/form.phtml&lt;/p&gt;&#xD;
+&#xD;
+&lt;p&gt;All you have to do is add the following piece of the code after the last li closing tag:&lt;/p&gt;&#xD;
+&#xD;
+&lt;pre&gt;&lt;?php echo $this-&gt;getChildHtml('form.additional.info'); ?&gt;&lt;/pre&gt;&#xD;
+&#xD;
+&lt;p&gt;Here is an example with the base/default template:&lt;/p&gt;&#xD;
+&#xD;
+&lt;pre&gt;&#xD;
+&lt;li&gt;&#xD;
+                        &lt;label for="review_field" class="required"&gt;&lt;em&gt;*&lt;/em&gt;&lt;?php echo $this-&gt;__('Review') ?&gt;&lt;/label&gt;&#xD;
+                        &lt;div class="input-box"&gt;&#xD;
+                            &lt;textarea name="detail" id="review_field" cols="5" rows="3" class="required-entry"&gt;&lt;?php echo $this-&gt;escapeHtml($data-&gt;getDetail()) ?&gt;&lt;/textarea&gt;&#xD;
+                        &lt;/div&gt;&#xD;
+                    &lt;/li&gt;&#xD;
+                    &lt;?php echo $this-&gt;getChildHtml('form.additional.info'); ?&gt;&#xD;
+                &lt;/ul&gt;&#xD;
+&lt;/pre&gt;</description>
+    <notes>- Original release</notes>
+    <authors><author><name>Digital Pianism</name><user>digitalpianism</user><email>contact@digital-pianism.com</email></author></authors>
+    <date>2015-11-16</date>
+    <time>21:14:23</time>
+    <contents><target name="magecommunity"><dir name="DigitalPianism"><dir name="ReviewCaptcha"><dir name="Block"><file name="Form.php" hash="cd6ec652a8fcebcf99c9c9cb6aeae35c"/></dir><dir name="controllers"><file name="IndexController.php" hash="2948058816f32ff8647e1c2145094083"/></dir><dir name="etc"><file name="config.xml" hash="651004f1c3d96394599ab72df3d4e7df"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="DigitalPianism_ReviewCaptcha.xml" hash="0e864d11c329f0c4b961dd29d0e19ecc"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="digitalpianism"><file name="reviewcaptcha.xml" hash="f347bc64a1519b3d26c9a34fa63915fb"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>4.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
