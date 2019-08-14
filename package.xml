@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>DigitalPianism_ReviewCaptcha</name>
-    <version>0.0.4</version>
+    <version>0.1.0</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
     <channel>community</channel>
@@ -44,11 +44,11 @@
                     &lt;?php echo $this-&gt;getChildHtml('form.additional.info'); ?&gt;&#xD;
                 &lt;/ul&gt;&#xD;
 &lt;/pre&gt;</description>
-    <notes>- Original release</notes>
+    <notes>- Use observers instead of rewriting controller and block.</notes>
     <authors><author><name>Digital Pianism</name><user>digitalpianism</user><email>contact@digital-pianism.com</email></author></authors>
-    <date>2015-11-16</date>
-    <time>21:14:23</time>
-    <contents><target name="magecommunity"><dir name="DigitalPianism"><dir name="ReviewCaptcha"><dir name="Block"><file name="Form.php" hash="cd6ec652a8fcebcf99c9c9cb6aeae35c"/></dir><dir name="controllers"><file name="IndexController.php" hash="2948058816f32ff8647e1c2145094083"/></dir><dir name="etc"><file name="config.xml" hash="651004f1c3d96394599ab72df3d4e7df"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="DigitalPianism_ReviewCaptcha.xml" hash="0e864d11c329f0c4b961dd29d0e19ecc"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="digitalpianism"><file name="reviewcaptcha.xml" hash="f347bc64a1519b3d26c9a34fa63915fb"/></dir></dir></dir></dir></dir></target></contents>
+    <date>2015-12-09</date>
+    <time>20:57:14</time>
+    <contents><target name="magecommunity"><dir name="DigitalPianism"><dir name="ReviewCaptcha"><dir name="Model"><file name="Observer.php" hash="13702fac76e5b72bff8a3caf26c1c829"/></dir><dir name="etc"><file name="config.xml" hash="c4dd460eeaa038c661455ab320a3a6ff"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="DigitalPianism_ReviewCaptcha.xml" hash="0e864d11c329f0c4b961dd29d0e19ecc"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="digitalpianism"><file name="reviewcaptcha.xml" hash="f347bc64a1519b3d26c9a34fa63915fb"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>4.1.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

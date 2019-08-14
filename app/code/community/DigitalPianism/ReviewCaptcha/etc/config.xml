@@ -2,31 +2,29 @@
 <config>
 	<modules>
 		<DigitalPianism_ReviewCaptcha>
-			<version>0.0.4</version>
+			<version>0.1.0</version>
 		</DigitalPianism_ReviewCaptcha>
 	</modules>
 	
 	<global>
-        <blocks>
-            <review>
-                <rewrite>
-                    <form>DigitalPianism_ReviewCaptcha_Block_Form</form>
-                </rewrite>
-            </review>
-        </blocks>
+		<models>
+			<reviewcaptcha>
+				<class>DigitalPianism_ReviewCaptcha_Model</class>
+			</reviewcaptcha>
+		</models>
+		<events>
+			<controller_action_predispatch_review_product_post>
+				<observers>
+					<digitalpianism_reviewcaptcha_check>
+						<class>reviewcaptcha/observer</class>
+						<method>checkReviewCaptcha</method>
+					</digitalpianism_reviewcaptcha_check>
+				</observers>
+			</controller_action_predispatch_review_product_post>
+		</events>
     </global>
 	
 	<frontend>
-		<routers>
-			<review_captcha>
-				<use>standard</use>
-				<args>
-					<module>DigitalPianism_ReviewCaptcha</module>
-					<frontName>reviewcaptcha</frontName>
-				</args>
-			</review_captcha>
-		</routers>
-
         <layout>
             <updates>
                 <review_captcha>
